@@ -9,18 +9,18 @@ export default function Header({ className }: HeaderProps) {
         <div className="text-white font-bold text-lg uppercase tracking-widest">
           Clash<span className="text-yellow-400">Brawl</span>Turn
         </div>
-        <nav className="flex gap-8">
-          <a
-            href="#tournaments"
-            className="text-white hover:text-yellow-400 transition-colors duration-300 uppercase text-sm"
-          >
+        <nav className="flex gap-6">
+          <a href="#tournaments" className="text-white hover:text-yellow-400 transition-colors duration-300 uppercase text-sm">
             Турниры
+          </a>
+          <a href="#leaderboard" className="text-white hover:text-yellow-400 transition-colors duration-300 uppercase text-sm">
+            Лидеры
           </a>
           <a
             href="#leaderboard"
-            className="text-white hover:text-yellow-400 transition-colors duration-300 uppercase text-sm"
+            className="bg-yellow-400 text-black font-bold px-4 py-1.5 uppercase text-xs tracking-wide hover:bg-yellow-300 transition-colors duration-300"
           >
-            Лидеры
+            Играть
           </a>
         </nav>
       </div>
