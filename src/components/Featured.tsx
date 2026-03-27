@@ -1,22 +1,58 @@
+const features = [
+  {
+    icon: "🏆",
+    title: "Бесплатный вход",
+    desc: "Никаких взносов. Регистрируйся и сражайся — участие абсолютно бесплатно для всех.",
+  },
+  {
+    icon: "⚔️",
+    title: "Clash Royale",
+    desc: "Турниры по Clash Royale — от новичков до профессионалов. Докажи, что твоя колода лучшая.",
+  },
+  {
+    icon: "🌟",
+    title: "Brawl Stars",
+    desc: "Командные и сольные турниры по Brawl Stars. Выбери режим и веди свою команду к победе.",
+  },
+  {
+    icon: "📊",
+    title: "Таблица лидеров",
+    desc: "Отслеживай свои результаты в реальном времени. Борись за место в топе лучших игроков.",
+  },
+];
+
 export default function Featured() {
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0 bg-white">
-      <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
-        <img
-          src="/images/woman-horse.jpg"
-          alt="Woman on horse in countryside"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
-        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Функции, которые не стоят на месте</h3>
-        <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-          Не просто список возможностей — живые, дышащие акценты. Каждая функция адаптируется к движению, контексту и настроению,
-          оживляя продукт с первого взгляда.
+    <div
+      id="tournaments"
+      className="min-h-screen px-6 py-20 bg-[#0d0d1a] flex flex-col justify-center"
+    >
+      <div className="max-w-6xl mx-auto w-full">
+        <h3 className="uppercase mb-4 text-sm tracking-widest text-yellow-400 text-center">
+          Почему ClashBrawlTurn
+        </h3>
+        <p className="text-3xl lg:text-5xl mb-16 text-white leading-tight text-center font-bold">
+          Турниры нового уровня —<br />играй, побеждай, становись легендой
         </p>
-        <button className="bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
-          Подробнее
-        </button>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((f) => (
+            <div
+              key={f.title}
+              className="border border-white/10 p-6 hover:border-yellow-400/50 transition-colors duration-300"
+            >
+              <div className="text-4xl mb-4">{f.icon}</div>
+              <h4 className="text-white font-bold text-lg mb-2 uppercase tracking-wide">
+                {f.title}
+              </h4>
+              <p className="text-neutral-400 text-sm leading-relaxed">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-12 text-center">
+          <button className="bg-yellow-400 text-black font-bold px-10 py-3 uppercase tracking-wide text-sm hover:bg-yellow-300 transition-colors duration-300">
+            Зарегистрироваться
+          </button>
+        </div>
       </div>
     </div>
   );

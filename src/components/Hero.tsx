@@ -25,13 +25,20 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="relative z-10 text-center text-white">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-          ОТКРОЙ
-        </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
-          Исследуй границы дизайна с иммерсивным параллакс-эффектом
+      <div className="absolute inset-0 bg-black/50 z-[5]" />
+      <div className="relative z-10 text-center text-white px-6">
+        <p className="text-yellow-400 uppercase tracking-[0.3em] text-sm md:text-base mb-4 font-semibold">
+          Clash Royale · Brawl Stars
         </p>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-none">
+          СРАЗИСЬ<br />ЗА ТРОН
+        </h1>
+        <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90 mb-10">
+          Бесплатные турниры для лучших игроков. Регистрируйся, побеждай и попадай в таблицу лидеров.
+        </p>
+        <button className="bg-yellow-400 text-black font-bold px-8 py-3 uppercase tracking-wide text-sm hover:bg-yellow-300 transition-colors duration-300">
+          Участвовать бесплатно
+        </button>
       </div>
     </div>
   );
